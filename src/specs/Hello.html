@@ -1,0 +1,104 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<link href="../concordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h1>System Specifications</h1>
+	<p>We are building specifications for our online order tracking
+		application.</p>
+	<p>Following is the requirement to show greeting to logged in user:</p>
+	<div class="example">
+		<h3>Example</h3>
+		<p>
+			When <span concordion:set="#userName">Ravikumar</span> logs in the
+			system, a greeting "<span
+				concordion:assertEquals="getGreeting(#userName)">Hello
+				Ravikumar!</span>" is displayed.
+		</p>
+	</div>
+
+	<h1>Calculator Specifications</h1>
+	<p>We are building online calculator support in our website.</p>
+	<p>Following is the requirement to add two numbers:</p>
+	<div class="example">
+		<h3>Example</h3>
+		<p>
+			The Sum of two numbers <span concordion:set="#firstNumber">2</span>
+			and <span concordion:set="#secondNumber">3</span> will be <span
+				concordion:execute="#result = sum(#firstNumber, #secondNumber)"></span><span
+				concordion:assertEquals="#result">5</span>.
+		</p>
+	</div>
+	<h1>System Specifications</h1>
+	<p>We are building specifications for our online order tracking
+		application.</p>
+	<p>Following is the requirement to split full name of a logged in
+		user to its constituents by splitting name by whitespace:</p>
+	<div class="example">
+		<h3>Example</h3>
+		<p>
+			User Name :<span concordion:set="#userName">Ravikumar Rai</span>
+		</p>
+		<p>
+			The User name <span
+				concordion:assertTrue="#userName.startsWith(#letter)">starts
+				with <b concordion:set="#letter">R</b>
+			</span>.
+		</p>
+		<p>
+			The User name <span
+				concordion:assertTrue="#userName.endsWith(#letter)">ends
+				with <b concordion:set="#letter">i</b>
+			</span>.
+		</p>
+	</div>
+	<h1>Calculator Specifications</h1>
+	<p>We are building online calculator support in our website.</p>
+	<p>Following is the requirement to add two numbers:</p>
+	<div class="example">
+		<h3>Example</h3>
+		<p>
+			The Sum of two numbers <span concordion:set="#firstNumber">2</span>
+			and <span concordion:set="#secondNumber">3</span> will be <span
+				concordion:execute="#result = sum(#firstNumber, #secondNumber)"></span><span
+				concordion:assertEquals="#result">5</span>.
+		</p>
+	</div>
+	<h1>System Specifications</h1>
+	<p>We are building specifications for our online order tracking
+		application.</p>
+	<p>Following is the requirement to split full name of a logged in
+		user to its constituents by splitting name by whitespace:</p>
+	<div class="example">
+		<h3>Example</h3>
+		<p>
+			The full name <span concordion:execute="#result = split(#TEXT)">Robert De</span> is to be broken into first name
+			 <span concordion:assertEquals="#result.first">Robert</span> and last
+			name <span concordion:assertEquals="#result.last">De</span>.
+		</p>
+	</div>
+	<h1>Calculator Specifications</h1>
+   <p>We are building online calculator support in our website.</p>
+   <p>Following is the requirement to add two numbers:</p>
+   <div class="example">
+      <h3>Example</h3>
+      <table>
+      <tr>
+         <th>First Number</th>
+         <th>Second Number</th>
+         <th>Sum</th>
+      </tr>
+      <tr concordion:execute="#result = sum(#firstNumber, #secondNumber)">
+         <td concordion:set="#firstNumber">2</td>
+         <td concordion:set="#secondNumber">3</td>
+         <td concordion:assertEquals="#result">5</td>
+      </tr>
+      <tr concordion:execute="#result = sum(#firstNumber, #secondNumber)">
+         <td concordion:set="#firstNumber">4</td>
+         <td concordion:set="#secondNumber">5</td>
+         <td concordion:assertEquals="#result">9</td>
+      </tr>
+   </table>
+	</div>
+</body>
+</html>
