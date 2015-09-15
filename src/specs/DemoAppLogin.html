@@ -1,0 +1,33 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<link href="../concordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<h1>Demo App Login Functionality</h1>
+	<p>We are Testing Login Functionality for the Demo site.</p>
+	<p>Following is the requirement to login using following
+		credentials:</p>
+	<div class="example">
+		<h3>Example</h3>
+		<p>
+		<span concordion:execute="navigateToLoginForm()"></span>
+		</p>
+		<table>
+      <tr>
+         <th>UserName</th>
+         <th>Password</th>
+         <th>Function</th>
+         <th>Welcome Message Assert</th>
+      </tr>
+      <tr >
+         <td concordion:set="#userName">ravi123</td>
+         <td concordion:set="#password">ravi123</td>
+         <td concordion:execute="login(#userName, #password)">login</td>         
+         <td concordion:assertEquals="assertWelcomeUserMsg(#userName)">Welcome ravi123</td>
+      </tr>
+      
+   </table>
+	</div>
+</body>
+</html>
